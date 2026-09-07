@@ -469,7 +469,7 @@ import confetti from 'canvas-confetti';
 		/*var pdfUrl = '/MyPortfolio/assets/docs/Guia-Para-Desarrolladores-Web.pdf';*/
 		var pdfUrl = window.location.origin + '/assets/docs/Guia-Para-Desarrolladores-Web.pdf';
 
-		console.log('[Descarga] Ruta detectada:', pdfUrl);
+		/*console.log('[Descarga] Ruta detectada:', pdfUrl);*/
 
 		// Petición para descargar el PDF como Blob y forzar el renombrado
     	fetch(pdfUrl)
@@ -507,7 +507,7 @@ import confetti from 'canvas-confetti';
                 URL.revokeObjectURL(blobUrl);
             }, 1000);
 
-            console.log('[Descarga] Descargado exitosamente como:', downloadName);
+            /*console.log('[Descarga] Descargado exitosamente como:', downloadName);*/
         })
         .catch(function (error) {
             console.error('[Descarga Error]:', error);
