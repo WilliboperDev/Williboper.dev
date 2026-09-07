@@ -467,15 +467,20 @@ import confetti from 'canvas-confetti';
 	window.downloadResourceGuide = function () {
 		var downloadName = '10-Errores-Comunes-en-WordPress.pdf';
 		/*var pdfUrl = '/MyPortfolio/assets/docs/Guia-Para-Desarrolladores-Web.pdf';*/
-		var pdfUrl = '/assets/docs/Guia-Para-Desarrolladores-Web.pdf';
+		var pdfUrl = window.location.origin + '/assets/docs/Guia-Para-Desarrolladores-Web.pdf';
 
 		console.log('[Descarga] Ruta detectada:', pdfUrl);
 
 		// Petición para descargar el PDF como Blob y forzar el renombrado
-    fetch(pdfUrl)
+    	fetch(pdfUrl)
         .then(function (response) {
             if (!response.ok) {
                 throw new Error('No se pudo obtener el archivo (HTTP ' + response.status + ')');
+            }
+			// Validar que el tipo de contenido sea realmente un PDF
+            var contentType = response.headers.get('content-type');
+            if (contentType && !contentType.includes('application/pdf')) {
+                throw new Error('El servidor devolvió un tipo incorrecto (' + contentType + ') en lugar de un PDF.');
             }
             return response.blob();
         })
@@ -506,7 +511,8 @@ import confetti from 'canvas-confetti';
         })
         .catch(function (error) {
             console.error('[Descarga Error]:', error);
-        });	}
+        });	
+	}
 
 	// Usar delegación de eventos más específica para capturar clicks dentro del popup
 	$(document).on('click', 'a.btn-download', function (e) {
