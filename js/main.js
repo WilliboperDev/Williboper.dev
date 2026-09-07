@@ -471,25 +471,42 @@ import confetti from 'canvas-confetti';
 
 		console.log('[Descarga] Ruta detectada:', pdfUrl);
 
-		// También intentar descargar con nombre personalizado
-		setTimeout(function () {
-			var a = document.createElement('a');
-			a.href = pdfUrl;
-			a.download = downloadName;
-			a.style.display = 'none';
+		// Petición para descargar el PDF como Blob y forzar el renombrado
+    fetch(pdfUrl)
+        .then(function (response) {
+            if (!response.ok) {
+                throw new Error('No se pudo obtener el archivo (HTTP ' + response.status + ')');
+            }
+            return response.blob();
+        })
+        .then(function (blob) {
+            var blobUrl = URL.createObjectURL(blob);
 
-			// Evitar que el clic de descarga burbujee y cierre el popup
-			a.addEventListener('click', function (e) {
-				e.stopPropagation();
-			});
+            var a = document.createElement('a');
+            a.href = blobUrl;
+            a.download = downloadName;
+            a.style.display = 'none';
 
-			var container = document.getElementById('popup-recursos') || document.body;
-			container.appendChild(a);
-			a.click();
-			a.remove();
-			/*console.log('[Descarga] Intentando descargar con nombre:', downloadName);*/
-		}, 500);
-	}
+            // Evitar que el clic de descarga burbujee y cierre el popup
+            a.addEventListener('click', function (e) {
+                e.stopPropagation();
+            });
+
+            var container = document.getElementById('popup-recursos') || document.body;
+            container.appendChild(a);
+            a.click();
+            a.remove();
+
+            // Limpiar el objeto de memoria
+            setTimeout(function () {
+                URL.revokeObjectURL(blobUrl);
+            }, 1000);
+
+            console.log('[Descarga] Descargado exitosamente como:', downloadName);
+        })
+        .catch(function (error) {
+            console.error('[Descarga Error]:', error);
+        });	}
 
 	// Usar delegación de eventos más específica para capturar clicks dentro del popup
 	$(document).on('click', 'a.btn-download', function (e) {
