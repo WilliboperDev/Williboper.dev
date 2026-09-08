@@ -15446,6 +15446,12 @@ a.text-dark:focus {
   visibility: hidden;
 }
 
+/* Ajuste especifico para los iconos sociales del footer se muestren correctamente */
+.ftco-footer-social .ftco-animate {
+  opacity: 1;
+  visibility: visible;
+}
+
 .ftco-section {
   padding: 7em 0;
   position: relative;
