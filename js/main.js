@@ -116,6 +116,7 @@ import confetti from 'canvas-confetti';
 				items: 1
 			};
 
+			// Si la pantalla es grande, usar animaciones de fadeIn/fadeOut
 			if (window.matchMedia('(min-width: 992px)').matches) {
 				homeSliderOptions.animateOut = 'fadeOut';
 				homeSliderOptions.animateIn = 'fadeIn';

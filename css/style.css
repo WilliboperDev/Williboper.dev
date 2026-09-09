@@ -13931,6 +13931,10 @@ a.text-dark:focus {
   touch-action: pan-y;
 }
 
+.carousel-FAQS.owl-drag .owl-item {
+  touch-action: pan-y;
+}
+
 .owl-carousel.home-slider {
   position: relative;
   height: 750px;
@@ -14767,7 +14771,7 @@ a.text-dark:focus {
 
 .ftco-hireme h2 {
   color: #fff;
-  font-size: 30px;
+  font-size: 29px;
   font-weight: 600;
 }
 
