@@ -108,7 +108,7 @@ import confetti from 'canvas-confetti';
 			var homeSliderOptions = {
 				loop: true,
 				autoplay: true, // Cambiarlo a false para evitar autoplay en el slider principal
-				smartSpeed: 1000,
+				smartSpeed: 1200,
 				autoplayTimeout: 6000,     // 6s en pantalla (tiempo para leer)
 				autoplayHoverPause: false,
 				margin: 0,
