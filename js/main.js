@@ -108,12 +108,10 @@ import confetti from 'canvas-confetti';
 			$('.home-slider').owlCarousel({
 				loop: true,
 				autoplay: true, // Cambiarlo a false para evitar autoplay en el slider principal
-				smartSpeed: 500,		// fade de 1s (más suave)
+				smartSpeed: 500,
 				autoplayTimeout: 6000,     // 6s en pantalla (tiempo para leer)
 				autoplayHoverPause: false,
 				margin: 0,
-				animateOut: 'fadeOut',
-				animateIn: 'fadeIn',
 				nav: false,
 				items: 1
 			});
