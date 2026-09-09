@@ -4298,6 +4298,7 @@ textarea.form-control.is-invalid {
 @media (max-width: 767px) {
   .btn {
     padding: 12px 20px;
+    font-size: 14px;
   }
 }
 
