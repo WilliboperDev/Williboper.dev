@@ -105,7 +105,7 @@ import confetti from 'canvas-confetti';
 		}
 
 		if ($('.home-slider').length) {
-			$('.home-slider').owlCarousel({
+			var homeSliderOptions = {
 				loop: true,
 				autoplay: true, // Cambiarlo a false para evitar autoplay en el slider principal
 				smartSpeed: 800,
@@ -114,7 +114,14 @@ import confetti from 'canvas-confetti';
 				margin: 0,
 				nav: false,
 				items: 1
-			});
+			};
+
+			if (window.matchMedia('(min-width: 768px)').matches) {
+				homeSliderOptions.animateOut = 'fadeOut';
+				homeSliderOptions.animateIn = 'fadeIn';
+			}
+
+			$('.home-slider').owlCarousel(homeSliderOptions);
 		}
 
 		if ($('.carousel-FAQS').length) {
