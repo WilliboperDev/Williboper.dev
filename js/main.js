@@ -108,7 +108,7 @@ import confetti from 'canvas-confetti';
 			var homeSliderOptions = {
 				loop: true,
 				autoplay: true, // Cambiarlo a false para evitar autoplay en el slider principal
-				smartSpeed: 800,
+				smartSpeed: 1000,
 				autoplayTimeout: 6000,     // 6s en pantalla (tiempo para leer)
 				autoplayHoverPause: false,
 				margin: 0,
@@ -116,7 +116,7 @@ import confetti from 'canvas-confetti';
 				items: 1
 			};
 
-			if (window.matchMedia('(min-width: 768px)').matches) {
+			if (window.matchMedia('(min-width: 992px)').matches) {
 				homeSliderOptions.animateOut = 'fadeOut';
 				homeSliderOptions.animateIn = 'fadeIn';
 			}
