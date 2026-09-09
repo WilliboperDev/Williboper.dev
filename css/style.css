@@ -14301,6 +14301,13 @@ a.text-dark:focus {
   background-position: top center;
 }
 
+@media (max-width: 767.98px) {
+  .hero-wrap.hero-wrap-2 {
+    height: 440px;
+    background-position: 70% center;
+  }
+}
+
 .hero-wrap.hero-wrap-2 .overlay {
   width: 100%;
   opacity: 0;
