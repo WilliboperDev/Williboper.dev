@@ -2707,7 +2707,7 @@ button.resource-popup-close.mfp-close {
   color: rgba(51, 51, 51, 0.75);
   line-height: 1.6;
   font-size: 0.9rem;
-  overflow-wrap: break-word; 
+  overflow-wrap: break-word;
   word-break: normal;
 }
 
@@ -2718,7 +2718,7 @@ button.resource-popup-close.mfp-close {
   left: 0;
   top: 0.1rem;
   background: #f0f0f0;
-  color:#000000;
+  color: #000000;
   font-size: 0.8rem;
   font-weight: 600;
   width: 1.7rem;
@@ -5877,10 +5877,10 @@ input[type="button"].btn-block {
   height: calc(1rem - 4px);
   background-color: #adb5bd;
   border-radius: 0.5rem;
-  transition: transform 0.15s ease-in-out, 
-              background-color 0.15s ease-in-out, 
-              border-color 0.15s ease-in-out, 
-              box-shadow 0.15s ease-in-out !important;
+  transition: transform 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -6072,9 +6072,9 @@ input[type="button"].btn-block {
   border: 0;
   border-radius: 1rem;
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out, 
-              border-color 0.15s ease-in-out, 
-              box-shadow 0.15s ease-in-out !important;
+  transition: background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out !important;
   -webkit-appearance: none;
   appearance: none;
 }
@@ -6108,9 +6108,9 @@ input[type="button"].btn-block {
   border: 0;
   border-radius: 1rem;
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out, 
-              border-color 0.15s ease-in-out, 
-              box-shadow 0.15s ease-in-out !important;
+  transition: background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out !important;
   -moz-appearance: none;
   appearance: none;
 }
@@ -6147,9 +6147,9 @@ input[type="button"].btn-block {
   border: 0;
   border-radius: 1rem;
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out, 
-              border-color 0.15s ease-in-out, 
-              box-shadow 0.15s ease-in-out !important;
+  transition: background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out !important;
   appearance: none;
 }
 
@@ -6210,9 +6210,9 @@ input[type="button"].btn-block {
 .custom-file-label,
 .custom-select {
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out, 
-              border-color 0.15s ease-in-out, 
-              box-shadow 0.15s ease-in-out !important;
+  transition: background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -7217,10 +7217,10 @@ input[type="button"].btn-block {
   vertical-align: baseline;
   border-radius: 0.25rem;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, 
-              background-color 0.15s ease-in-out, 
-              border-color 0.15s ease-in-out, 
-              box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13198,9 +13198,9 @@ a.text-dark:focus {
   -webkit-transform: translateY(0);
   transform: translateY(0);
   transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1),
-              background-color 0.6s ease, 
-              box-shadow 0.6s ease, 
-              color 0.4s ease !important;
+    background-color 0.6s ease,
+    box-shadow 0.6s ease,
+    color 0.4s ease !important;
 }
 
 @media screen and (max-width: 320px) {
@@ -15711,6 +15711,7 @@ a.text-dark:focus {
 }
 
 @media (max-width: 767.98px) {
+
   .owl-carousel.home-slider,
   .owl-carousel.home-slider .slider-item,
   .owl-carousel.home-slider .slider-item .slider-text {
@@ -16634,6 +16635,7 @@ a.text-dark:focus {
 
 .blog-entry .meta span {
   color: var(--secondary-marca);
+  white-space: nowrap;
 }
 
 .blog-entry .meta a {
