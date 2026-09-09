@@ -15092,6 +15092,20 @@ a.text-dark:focus {
     width: 100%;
     min-height: auto;
   }
+
+  /* Asegurar altura suficiente para contener círculo y flecha sin desbordes */
+  .FAQS-section .FAQS-wrap .text {
+    min-height: 60px;
+  }
+
+  /* Ajuste vertical del círculo y la flecha en tablets */
+  .FAQS-wrap .fa-question-circle {
+    top: 4px;
+  }
+
+  .FAQS-wrap .faq-trigger .faq-icon {
+    top: 38px;
+  }
 }
 
 /* ================================================================
