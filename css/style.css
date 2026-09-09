@@ -7418,7 +7418,7 @@ a.badge-dark.focus {
   padding: 8px 12px;
   margin-bottom: 1rem;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 13px;
   margin-top: 6px;
 }
 
@@ -13918,6 +13918,11 @@ a.text-dark:focus {
 
 .owl-carousel .owl-dots .owl-dot.active {
   background: #b3b3b3;
+}
+
+/* Permite el desplazamiento vertical sobre el hero en dispositivos táctiles */
+.home-slider.owl-drag .owl-item {
+  touch-action: pan-y;
 }
 
 .owl-carousel.home-slider {
