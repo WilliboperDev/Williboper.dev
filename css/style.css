@@ -13883,6 +13883,11 @@ a.text-dark:focus {
   opacity: 1;
 }
 
+.home-slider .owl-item,
+.home-slider .owl-item.active {
+  opacity: 1;
+}
+
 .owl-carousel .owl-dots {
   text-align: center;
 }
