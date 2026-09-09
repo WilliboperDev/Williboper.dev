@@ -140,11 +140,6 @@ import confetti from 'canvas-confetti';
 					0: {
 						items: 1
 					},
-					768: {
-						items: 2,
-						margin: 20,
-						stagePadding: 20
-					},
 					1000: {
 						items: 3
 					}
