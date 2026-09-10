@@ -3128,30 +3128,30 @@ button.resource-popup-close.mfp-close {
   border-left-color: rgba(255, 255, 255, 0.12);
 }
 
-.btn-download.loading,
-.btn-download.loading:hover,
-.btn-download.loading:focus,
-.btn-download.loading:active {
+/* Estado loading — especificidad (0,5,0) supera a .btn.btn-primary:hover (0,3,0) */
+.btn.btn-primary.btn-download.loading,
+.btn.btn-primary.btn-download.loading:hover,
+.btn.btn-primary.btn-download.loading:focus,
+.btn.btn-primary.btn-download.loading:active {
   padding-right: 2.75rem !important;
   pointer-events: none;
   cursor: wait;
   opacity: 0.92;
-  /* Anclar visual al estado base — gana a .btn.btn-primary:hover por orden */
   background: #fff !important;
-  border-color: var(--primary-marca) !important;
+  border: 2px solid var(--primary-marca) !important;
   color: #000000 !important;
 }
 
-.btn-download.loading .btn-download-text {
+.btn.btn-primary.btn-download.loading .btn-download-text {
   opacity: 0.85;
 }
 
-.btn-download.loading .spinner-border,
-.btn-download.loading:hover .spinner-border,
-.btn-download.loading:focus .spinner-border,
-.btn-download.loading:active .spinner-border {
+/* Spinner azul siempre visible — especificidad (0,5,1) */
+.btn.btn-primary.btn-download.loading .spinner-border,
+.btn.btn-primary.btn-download.loading:hover .spinner-border,
+.btn.btn-primary.btn-download.loading:focus .spinner-border,
+.btn.btn-primary.btn-download.loading:active .spinner-border {
   display: inline-block !important;
-  /* Spinner azul siempre visible sobre fondo blanco forzado */
   border-top-color: var(--secondary-marca) !important;
   border-right-color: rgba(18, 67, 144, 0.55) !important;
   border-bottom-color: rgba(18, 67, 144, 0.3) !important;
