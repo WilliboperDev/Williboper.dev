@@ -3128,12 +3128,15 @@ button.resource-popup-close.mfp-close {
   border-left-color: rgba(255, 255, 255, 0.12);
 }
 
-.btn-download.loading {
+.btn-download.loading,
+.btn-download.loading:hover,
+.btn-download.loading:focus,
+.btn-download.loading:active {
   padding-right: 2.75rem !important;
   pointer-events: none;
   cursor: wait;
   opacity: 0.92;
-  /* Anclar el estado visual al base para cancelar el hover táctil en móvil */
+  /* Anclar visual al estado base — gana a .btn.btn-primary:hover por orden */
   background: #fff !important;
   border-color: var(--primary-marca) !important;
   color: #000000 !important;
@@ -3143,13 +3146,16 @@ button.resource-popup-close.mfp-close {
   opacity: 0.85;
 }
 
-.btn-download.loading .spinner-border {
+.btn-download.loading .spinner-border,
+.btn-download.loading:hover .spinner-border,
+.btn-download.loading:focus .spinner-border,
+.btn-download.loading:active .spinner-border {
   display: inline-block !important;
-  /* Spinner azul visible sobre fondo blanco (estado base forzado) */
-  border-top-color: var(--secondary-marca);
-  border-right-color: rgba(18, 67, 144, 0.55);
-  border-bottom-color: rgba(18, 67, 144, 0.3);
-  border-left-color: rgba(18, 67, 144, 0.12);
+  /* Spinner azul siempre visible sobre fondo blanco forzado */
+  border-top-color: var(--secondary-marca) !important;
+  border-right-color: rgba(18, 67, 144, 0.55) !important;
+  border-bottom-color: rgba(18, 67, 144, 0.3) !important;
+  border-left-color: rgba(18, 67, 144, 0.12) !important;
 }
 
 /* ================================================================
