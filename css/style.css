@@ -3098,6 +3098,7 @@ button.resource-popup-close.mfp-close {
 .btn-download {
   position: relative;
   transition: opacity 0.2s ease, padding 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn-download .spinner-border {
@@ -3117,11 +3118,25 @@ button.resource-popup-close.mfp-close {
   animation: btn-spin 0.9s linear infinite;
 }
 
+/* Spinner blanco cuando el botón está en hover (fondo azul) */
+.btn-download:hover .spinner-border,
+.btn-download:focus .spinner-border,
+.btn-download:active .spinner-border {
+  border-top-color: rgba(255, 255, 255, 0.95);
+  border-right-color: rgba(255, 255, 255, 0.55);
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+  border-left-color: rgba(255, 255, 255, 0.12);
+}
+
 .btn-download.loading {
   padding-right: 2.75rem !important;
   pointer-events: none;
   cursor: wait;
   opacity: 0.92;
+  /* Anclar el estado visual al base para cancelar el hover táctil en móvil */
+  background: #fff !important;
+  border-color: var(--primary-marca) !important;
+  color: #000000 !important;
 }
 
 .btn-download.loading .btn-download-text {
@@ -3130,6 +3145,11 @@ button.resource-popup-close.mfp-close {
 
 .btn-download.loading .spinner-border {
   display: inline-block !important;
+  /* Spinner azul visible sobre fondo blanco (estado base forzado) */
+  border-top-color: var(--secondary-marca);
+  border-right-color: rgba(18, 67, 144, 0.55);
+  border-bottom-color: rgba(18, 67, 144, 0.3);
+  border-left-color: rgba(18, 67, 144, 0.12);
 }
 
 /* ================================================================
