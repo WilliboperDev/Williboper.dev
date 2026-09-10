@@ -2494,11 +2494,20 @@ button.resource-popup-close.mfp-close {
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+  outline: none;
 }
 
 /* Oculta la barra de scroll del popup en todos los dispositivos */
 .resource-popup-card::-webkit-scrollbar {
   display: none;
+  width: 0;
+  height: 0;
+}
+
+.resource-popup-card::-webkit-scrollbar-track,
+.resource-popup-card::-webkit-scrollbar-thumb {
+  background: transparent;
 }
 
 /* Grid layout para el contenido del popup */
